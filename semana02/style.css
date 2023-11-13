@@ -1,0 +1,17 @@
+body{
+
+}
+#cabecalho{
+    font-size: 50px;
+}
+#cor1{
+    color: #c92a2a;
+    font-family: verdana;
+   
+}
+#cor2{  
+    color:rgb(41, 34, 38);
+    text-decoration: underline;
+    text-decoration: none;
+    font-family: 'Roboto Condensed', sans-serif;
+ }
