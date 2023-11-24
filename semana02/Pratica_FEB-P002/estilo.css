@@ -1,0 +1,54 @@
+.container{
+    display: grid;
+    /*grid-template-columns:repeat(auto-fit, minmax(100px, 1fr));
+    grid-gap: 10px;*/
+    grid-gap: 10px;
+    grid-template-rows:100px 90px 90px 90px 90px 80px 80px 80px 100px 50px;
+ 
+    grid-template-areas: 
+    "nave nave nave"
+    "section section1 aside"
+    "section section1 aside"
+    "section section1 aside"
+    "section section1 aside"
+    "a5 a6 a6"
+    "a5 a6 a6"
+    "a5 a6 a6"
+    "footer footer footer"
+    "footer footer footer"
+    ;
+   
+    
+}
+#a1{
+    background-color: bisque;
+    grid-area: nave;
+
+}
+#a2{
+    background-color: #282323;          
+   grid-area: section;
+    
+}
+#a3{
+    background-color: #926125; 
+    grid-area: section1;
+}
+#a4{
+    background-color: rgb(255, 196, 226);
+    grid-area: aside;
+    
+}
+#a5{
+    background-color: #e28512;
+    grid-area: a5;
+}
+#a6{
+    background-color: bisque;
+    grid-area: a6;
+}
+#a7{
+    background-color: rgb(80, 58, 32);
+    grid-area: footer;
+}
+
