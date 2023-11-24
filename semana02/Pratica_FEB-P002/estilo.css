@@ -57,7 +57,7 @@
 
 }
 #a2{
-    background-color: #7f2626;          
+    background-color: bisque;      
    grid-area: section;
  
    
@@ -68,14 +68,33 @@
     text-align: center;
     padding-top: 10px;
     font-size: 40px;
+    color: aliceblue;
 }
-#a22{
-    border-top: solid 30px #1f180f;
-    text-align: center;
+#a22{ 
+   
     font-size: 40px;
+    font-family: 'Nunito', sans-serif;   
 }
+#a22 ol{
+    padding-left: 200px;
+}
+#a22 li { 
+    font-size: 40px;
+    font-family: 'Nunito', sans-serif;   
+}
+#a22 li a{
+    text-decoration: none;
+    
+} 
+#a22 li a:hover{
+    
+    color: red;
+    font-family: 'Nunito', sans-serif;
+   
+}
+
 #a3{
-    background-color: #926125; 
+    background-color: bisque;
     grid-area: section1;
 }
 #a31{
@@ -84,42 +103,82 @@
     text-align: center;
     padding-top: 10px;
     font-size: 40px;
+    color: aliceblue;
 }
 #a32{
     grid-area: section1;
    padding-left: 5px;
     font-size: 40px;
 }
+
 #a4{
-    background-color: rgb(255, 196, 226);
+    background-color: bisque;
     grid-area: aside;
-  
     display: inline-block;
-    grid-gap: 10px;
+    grid-gap: 10px;   
     
-    ;
+}
+#a41{
+   
+    grid-area: aside;  
+    background-color: #1f180f;
+    text-align: center;
+    padding-top: 10px;
+    font-size: 40px;
+    color: aliceblue;
 
 }
+#a42{
+    grid-area: aside;
+    display: inline-block;
+    grid-gap: 10px;   
+    ;
+}
+
 #a5{
-    background-color: #e28512;
+    background-color: bisque;
     grid-area: a5;
 }
+#a51{
+    background-color: #e28512;
+    grid-area: a5;
+    background-color: #1f180f;
+    text-align: center;
+    padding-top: 10px;
+    font-size: 40px;
+    color: aliceblue;
+}
+#a52{
+   
+    grid-area: a5;
+}
+
 #a6{
     background-color: bisque;
     grid-area: a6;
 }
+#a61{
+    background-color: bisque;
+    grid-area: a6;
+    background-color: #1f180f;
+    text-align: center;
+    padding-top: 10px;
+    font-size: 40px;
+    color: aliceblue;
+}
+
 #a7{
-    background-color: rgb(80, 58, 32);
+    background-color: bisque;
     grid-area: footer;
 }
-
-#a41{
-    background-color: rgb(70, 32, 80);
-   grid-template-rows: 100%;
+#a71{
+    grid-area: footer;
+    background-color: #1f180f;
+    text-align: center;
+    padding-top: 10px;
+    font-size: 40px;
+    color: aliceblue;
 }
 
-#a42{
-    background-color: rgb(42, 32, 80);
 
-}
 
