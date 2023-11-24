@@ -1,3 +1,30 @@
+
+    .container{
+        display: grid;
+        /*grid-template-columns:repeat(auto-fit, minmax(100px, 1fr));
+        grid-gap: 10px;*/
+        max-width: 1500px;
+        margin: 0 auto;
+        grid-gap: 10px;
+        grid-template-rows:100px 90px 90px 90px 90px 80px 80px 80px 100px 50px;
+     
+        grid-template-areas: 
+        "nave nave nave"
+        "section section1 aside"
+        "section section1 aside"
+        "section section1 aside"
+        "section section1 aside"
+        "a5 a6 a6"
+        "a5 a6 a6"
+        "a5 a6 a6"
+        "footer footer footer"
+        "footer footer footer"
+        ;
+       
+        
+    }
+
+@media (max-width: 1000px) {   
 .container{
     display: grid;
     /*grid-template-columns:repeat(auto-fit, minmax(100px, 1fr));
@@ -20,24 +47,58 @@
    
     
 }
+}
 #a1{
     background-color: bisque;
     grid-area: nave;
+   text-align: center;
+   padding-top: 30px;
+   font-size: 40px;
 
 }
 #a2{
-    background-color: #282323;          
+    background-color: #7f2626;          
    grid-area: section;
+ 
+   
     
+}
+#a21{
+   background-color: #1f180f;
+    text-align: center;
+    padding-top: 10px;
+    font-size: 40px;
+}
+#a22{
+    border-top: solid 30px #1f180f;
+    text-align: center;
+    font-size: 40px;
 }
 #a3{
     background-color: #926125; 
     grid-area: section1;
 }
+#a31{
+    grid-area: section1;
+    background-color: #1f180f;
+    text-align: center;
+    padding-top: 10px;
+    font-size: 40px;
+}
+#a32{
+    grid-area: section1;
+   padding-left: 5px;
+    font-size: 40px;
+}
 #a4{
     background-color: rgb(255, 196, 226);
     grid-area: aside;
+  
+    display: inline-block;
+    grid-gap: 10px;
     
+    ;
+
 }
 #a5{
     background-color: #e28512;
@@ -50,5 +111,15 @@
 #a7{
     background-color: rgb(80, 58, 32);
     grid-area: footer;
+}
+
+#a41{
+    background-color: rgb(70, 32, 80);
+   grid-template-rows: 100%;
+}
+
+#a42{
+    background-color: rgb(42, 32, 80);
+
 }
 
