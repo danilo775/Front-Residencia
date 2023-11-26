@@ -1,0 +1,91 @@
+body{
+  font-family: 'Nunito', sans-serif;
+  width: 1200px;
+  background-color: aliceblue;
+  margin: 0 auto;
+}
+
+.container-destinos{
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+@media (max-width: 1200px) {   
+  .container-destinos{
+  display: block;
+ }  
+}
+.roteiros-viagens img{
+  position: relative;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  width: 100%;
+    height: 200px;
+    margin-bottom: 10px;
+}
+
+.roteiros-viagens{
+  border: 1px solid #000;
+  width: 250px;
+  background-color: aqua;
+  border-radius: 10px;
+   margin-bottom: 10px;
+}
+
+.roteiro-destino{
+  margin-right: 140px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+.roteiro-incluso {
+  margin-top: 20px;
+  font-size: 10px;
+  font-weight: bold;
+  list-style-type: none;
+  padding: 0;
+  margin-left: 10px;
+  ;
+}
+.roteiro-incluso li::before {
+  content: '\2713'; 
+  display: inline-block;
+  margin-right: 5px;
+}
+.roteiro-preco{
+  padding-top: 20px;
+  margin-top: 3px;
+  font-weight: bold;
+  font-size: 20px;
+  margin-left: 10px;
+}
+.roteiro-obs{
+  float: left;
+  margin-top: 3px;
+  font-size: 10px;
+  margin-left: 10px;
+}
+.roteiro-parcelamento{
+  width: 200px;
+  border-top: 1px solid #000;
+  position: absolute;
+  margin: 0 auto;
+  font-family: 'Roboto Condensed', sans-serif;
+  color: blue;
+  text-align: center;
+    margin-top: 50px;
+  font-size: 10px;
+  margin-left: 29px;
+  
+}
+  .roteiro-comprar{
+    outline: none;
+    float: right;
+    height: 30px;
+    margin-bottom: 40px;
+    margin-right: 10px;
+    border-radius:5px ;
+    background-color: aquamarine;
+  }
+  
