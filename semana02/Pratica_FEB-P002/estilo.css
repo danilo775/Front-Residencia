@@ -24,26 +24,12 @@
         
     }
 
-@media (max-width: 1000px) {   
+@media (max-width: 500px) {   
 .container{
     display: grid;
     /*grid-template-columns:repeat(auto-fit, minmax(100px, 1fr));
     grid-gap: 10px;*/
-    grid-gap: 10px;
-    grid-template-rows:100px 90px 90px 90px 90px 80px 80px 80px 100px 50px;
- 
-    grid-template-areas: 
-    "nave nave nave"
-    "section section1 aside"
-    "section section1 aside"
-    "section section1 aside"
-    "section section1 aside"
-    "a5 a6 a6"
-    "a5 a6 a6"
-    "a5 a6 a6"
-    "footer footer footer"
-    "footer footer footer"
-    ;
+  display: block;
    
     
 }
@@ -53,7 +39,7 @@
     grid-area: nave;
    text-align: center;
    padding-top: 30px;
-   font-size: 40px;
+   font-size: 45px;
 
 }
 #a2{
@@ -76,7 +62,7 @@
     font-family: 'Nunito', sans-serif;   
 }
 #a22 ol{
-    padding-left: 200px;
+    padding-left: 100px;
 }
 #a22 li { 
     font-size: 40px;
@@ -134,6 +120,12 @@
     grid-gap: 10px;   
     ;
 }
+img{
+    width: 450px;
+    height: 140px;
+    padding-left: 50px;
+    padding-top: 15px; 
+}
 
 #a5{
     background-color: bisque;
@@ -166,10 +158,14 @@
     font-size: 40px;
     color: aliceblue;
 }
+#a62{
+    padding: 20px; 
+}
 
 #a7{
     background-color: bisque;
     grid-area: footer;
+    display: fixed;
 }
 #a71{
     grid-area: footer;
@@ -178,6 +174,11 @@
     padding-top: 10px;
     font-size: 40px;
     color: aliceblue;
+}
+#a72{
+    text-align: center;
+   padding: 25px;
+    font-size: 30px;
 }
 
 
