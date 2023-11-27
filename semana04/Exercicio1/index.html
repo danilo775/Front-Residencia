@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>estrutura de controle</title>
+</head>
+<body>
+    <form id="TarefasForm">
+        <input type="text" id="msg" required>
+        <button type="submit" id="bt">Adicionar</button>
+    </form>
+
+    <script>
+       var req = new XMLHttpRequest();
+		var url = "../action/login.php";
+	
+		tarefa = new Object();
+		var msg = document.getElementById("msg");
+
+		tarefa.msg=msg.value;	
+		console.log(stringJSON = JSON.stringify(tarefa));
+
+		req.setRequestHeader("Content-Type","application/json");
+
+		req.send(stringJSON);       
+        
+    </script>
+    <script>
+        class tarefas {
+            constructor(nome) {
+                this.nome = nome;
+            }
+        }
+    </script>
+
+</body>
+</html>

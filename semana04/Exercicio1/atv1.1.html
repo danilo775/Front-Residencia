@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salvar e Imprimir em JSON</title>
+</head>
+<body>
+
+    <form id="TarefasForm">
+        <input type="text" id="msg" required>
+        <button type="submit" id="bt">Adicionar</button>
+    </form>
+
+    <ul id="listaTarefas"></ul>
+
+    <script>
+        // Função para imprimir as tarefas na página
+function imprimirTarefas() {
+    // Obtém os dados do localStorage
+    var dadosExistente = localStorage.getItem("tarefas");
+
+    // Verifica se há dados no localStorage
+    if (dadosExistente) {
+        // Converte a string JSON para um array de objetos
+        var tarefas = JSON.parse(dadosExistente);
+
+        // Obtém o elemento onde as tarefas serão exibidas
+        var listaTarefas = document.getElementById("listaTarefas");
+
+        // Limpa o conteúdo atual da lista
+        listaTarefas.innerHTML = "";
+
+        // Percorre o array de tarefas e adiciona cada uma à lista
+        tarefas.forEach(function(tarefa) {
+            var li = document.createElement("li");
+            li.textContent = tarefa.mensagem;
+            listaTarefas.appendChild(li);
+        });
+    }
+}
+
+// Adiciona a função de impressão de tarefas ao carregar a página
+window.onload = imprimirTarefas;
+
+// Adiciona um ouvinte de evento ao formulário para atualizar a lista de tarefas quando uma nova tarefa é adicionada
+document.getElementById("TarefasForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    // ... (código anterior para adicionar uma nova tarefa)
+    imprimirTarefas(); // Atualiza a lista de tarefas após adicionar uma nova tarefa
+});
+    </script>
+</body>
+</html>
+
+
+
+
