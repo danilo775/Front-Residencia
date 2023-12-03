@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roteiros de Viagem</title>
+    <style>
+        /* Estilos para melhor apresentação */
+        .container-destinos {
+            display: flex;
+            margin: 0 auto
+        }
+        .roteiro-viagens {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <form id="formulario-roteiro">
+        <label for="destino">Destino:</label>
+        <input type="text" id="destino" name="destino" required><br>
+    
+        <label for="descricao">Descrição:</label>
+        <textarea id="descricao" name="descricao" rows="4" required></textarea><br>
+    
+        <label for="imagem">URL da Imagem:</label>
+        <input type="text" id="imagem" name="imagem" required><br>
+    
+        <button type="button" onclick="inserirRoteiro()">Inserir Roteiro</button>
+    </form>
+    <hr/>
+
+<!-- Container para os destinos -->
+<div class="container-destinos" id="container-destinos">
+    <!-- Os roteiros de viagem serão adicionados aqui -->
+</div>
+
+<script>
+    function inserirRoteiro() {
+        // Obtém os valores do formulário
+        var destino = document.getElementById("destino").value;
+        var descricao = document.getElementById("descricao").value;
+        var imagem = document.getElementById("imagem").value;
+
+        // Cria um novo elemento div para representar o roteiro de viagem
+        var novoRoteiro = document.createElement("div");
+        novoRoteiro.classList.add("roteiro-viagens");
+
+        // Adiciona o conteúdo ao novo roteiro
+        novoRoteiro.innerHTML = `
+            <h3>${destino}</h3>
+            <p>${descricao}</p>
+            <img src="${imagem}" alt="${destino}" style="max-width: 100%;">
+        `;
+
+        // Adiciona o novo roteiro ao container de destinos
+        document.getElementById("container-destinos").appendChild(novoRoteiro);
+
+        // Limpa os campos do formulário após inserir o roteiro
+        document.getElementById("imagem").value = "";
+        document.getElementById("destino").value = "";
+        document.getElementById("descricao").value = "";
+    }
+</script>
+</body>
+</html>
