@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roteiros de Viagem</title>
+    <style>
+        .container-destinos {
+            display: flex;
+        }
+        .roteiro-viagens {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        #formulario-roteiro{margin: 0 auto; }
+        img{
+            border-radius: 10px;
+            width: 10%;
+            height: 150px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <form id="formulario-roteiro">
+        <label for="destino">Destino:</label>
+        <input type="text" id="destino" name="destino" required><br>
+    
+        <label for="descricao">Descrição:</label>
+        <textarea id="descricao" name="descricao" rows="4" required></textarea><br>
+    
+        <label for="imagem"> <img src="./assets/imgs/fortaleza.jpg"></label>
+        <input type="text" id="imagem" name="imagem" required><br>
+    
+        <button type="button" onclick="inserirRoteiro()">Inserir Roteiro</button>
+    </form>
+    <hr/>
+
+
+<div class="container-destinos" id="container-destinos">
+
+</div>
+
+<script>
+    function inserirRoteiro() {
+   
+        var destino = document.getElementById("destino").value;
+        var descricao = document.getElementById("descricao").value;
+        var imagem = document.getElementById("imagem").value;
+
+        var novoRoteiro = document.createElement("div");
+        novoRoteiro.classList.add("roteiro-viagens");
+
+
+        novoRoteiro.innerHTML = `
+            <h3>${destino}</h3>
+            <p>${descricao}</p>
+            <img src="${imagem}" alt="${destino}" style="max-width: 100%;">
+        `;
+
+        document.getElementById("container-destinos").appendChild(novoRoteiro);
+        document.getElementById("imagem").value = "";
+        document.getElementById("destino").value = "";
+        document.getElementById("descricao").value = "";
+    }
+</script>
+</body>
+</html>
