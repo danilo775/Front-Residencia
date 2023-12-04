@@ -1,15 +1,15 @@
-// Associa um evento click em cada botão
+// pegar clicar
 const botoes = document.querySelectorAll(".roteiro-comprar");
 botoes.forEach((botao) => {
   botao.addEventListener("click", () => {
-    // Captura as informações do pacote turístico
+    // pega as informações 
     const destino = document.querySelector(".roteiro-destino").textContent;
     const inclusos = document.querySelectorAll(".roteiro-incluso li").map((li) => li.textContent);
     const preco = document.querySelector(".roteiro-preco").textContent;
     const obs = document.querySelector(".roteiro-obs").textContent;
     const parcelamento = document.querySelector(".roteiro-parcelamento").textContent;
 
-    // Cria um objeto JSON com as informações capturadas
+    // Cria um objeto JSON 
     const pacoteTuristico = {
       destino,
       inclusos,
@@ -18,7 +18,7 @@ botoes.forEach((botao) => {
       parcelamento,
     };
 
-    // Imprime o objeto JSON no console
+    // Imprime o  JSON 
     console.log(pacoteTuristico);
     alert(pacoteTuristico);
   });
