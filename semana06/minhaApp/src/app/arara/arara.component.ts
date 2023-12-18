@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component , Input} from '@angular/core';
 
 @Component({
   selector: 'app-arara',
@@ -12,6 +12,9 @@ export class AraraComponent {
      link: string = 'https://pt.wikipedia.org/wiki/Arara_cenide';
     url2: string = 'https://uploads.jovemnerd.com.br/wp-content/uploads/2021/06/yusuke-urameshi-live-action-yu-yu-hakusho.jpg';
     nome2: string = 'tamandua';
+
+    @Input() cor: string = ''; //pagando o valor do pai para o filho
+
     public getToString(): string {
       return this.nome + ' ' + this.descricao;
     }
