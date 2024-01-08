@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { TabelaComponent } from './tabela/tabela.component';
 import { AraraComponent } from './arara/arara.component';
 import { FormsModule } from '@angular/forms';
+import { PipeTestePipe } from './pipe-teste.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     TabelaComponent,
-    AraraComponent
+    AraraComponent,
+    PipeTestePipe
   ],
   imports: [
     BrowserModule,
