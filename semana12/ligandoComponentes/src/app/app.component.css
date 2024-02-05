@@ -1,0 +1,18 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+nav {
+    position: fixed;
+    width: 100%; /* set the width to match the content */
+}
+aside {
+    padding-top: 50px;
+    margin-top: 50px; /* adjust as needed based on the height of the fixed nav */
+    display: flex;
+    
+}
+app-spider, app-pessoa {
+    flex: 1;
+    width: 100%;
+}
