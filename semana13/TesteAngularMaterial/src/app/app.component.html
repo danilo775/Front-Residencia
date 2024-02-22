@@ -1,0 +1,16 @@
+<form #meuForm="ngForm" >
+    <mat-form-field>
+        <mat-label>Nome:</mat-label>
+        <input type="text"
+         name="nome"
+         ngModel
+         #nomeControl="ngModel"
+         required
+         >
+    </mat-form-field>
+    <div>
+        <br/> <br/>
+
+        <button type="button" [disabled]="meuForm.invalid" >Enviar</button>
+    </div>
+</form>   
