@@ -1,4 +1,4 @@
-<form >
+<form [formGroup]="petForm" (ngSubmit)="adicionarPet()">
     <input type="text" formControlName="NomeTutor" placeholder="Nome do Tutor">
     <input type="text" formControlName="nomePet" placeholder="Nome do Pet">
     <input type="date" formControlName="idade" placeholder="Idade ">

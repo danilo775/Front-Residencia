@@ -28,5 +28,9 @@ export class FormularioComponent implements OnInit {
     });
     this.bancoService.getTickets();
   }
-
+  adicionarPet() {
+    console.log(this.petForm.value);
+    this.bancoService.addTicket(this.petForm.value);
+    this.petForm.reset();
+  }
 }
