@@ -1,0 +1,29 @@
+<form #meuForm2="ngForm">
+    <mat-form-field>
+        <mat-label>Email:</mat-label>
+        <input 
+            matInput
+            type="text" 
+            name="email" 
+
+            ngModel
+            appEmailValidator
+            #emailControl="ngModel"
+            required
+        >
+        <mat-hint >O email sera usado para login</mat-hint>
+        <mat-error *ngIf="emailControl.hasError('required')">email <strong>obrigatório </strong> </mat-error>
+        <mat-error *ngIf="emailControl.hasError('invalidEmail') && !emailControl.hasError('required')">O email esta fora do padrao</mat-error>
+
+        
+    </mat-form-field>
+    <br /><br /><br />
+    <div>
+        <p>valido: {{ emailControl.valid }}</p>
+        <p> tocado: {{ emailControl.touched }}</p>
+    </div>
+    <br /><br /><br />
+
+    <button type="button" [disabled]="meuForm2.invalid" (click)="onClick()"  >Enviar</button> 
+     
+</form>

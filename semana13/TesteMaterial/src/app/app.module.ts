@@ -7,9 +7,16 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { FormularioComponent } from './Componets/formulario/formulario.component';
+import { Form2Component } from './Componets/form2/form2.component';
+import { EmailValidatorDirective } from './Componets/formulario/directives/email-validator.directive';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FormularioComponent,
+    Form2Component,
+    EmailValidatorDirective,
+    FormularioComponent 
   ],
   imports: [
     BrowserModule,
