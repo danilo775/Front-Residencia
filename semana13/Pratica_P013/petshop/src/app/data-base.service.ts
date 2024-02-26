@@ -28,7 +28,8 @@ export class DataBaseService implements OnInit {
                                 aeroportoChegada: string }) {
 
     this.http.post(
-      'https://petshop-2e94d-default-rtdb.firebaseio.com/posts.json',
+      'https://petshop-b760a-default-rtdb.firebaseio.com/posts.json',
+      
        ticketData)
       .subscribe(responseData => {
         console.log(responseData);
@@ -36,7 +37,7 @@ export class DataBaseService implements OnInit {
   }
 
   getTickets() {
-    return this.http.get< {[key:string]: Ticket}>('https://petshop-2e94d-default-rtdb.firebaseio.com/posts.json',
+    return this.http.get< {[key:string]: Ticket}>('https://petshop-b760a-default-rtdb.firebaseio.com/posts.json',
       {
         params: new HttpParams().set('print', 'pretty')
       }
@@ -54,5 +55,5 @@ export class DataBaseService implements OnInit {
       )
     );
   }
-
+  
 }

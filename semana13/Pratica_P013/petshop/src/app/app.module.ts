@@ -10,7 +10,7 @@ import { Routes } from '@angular/router';
 
 const routes: Routes = [
 
-  { path: 'adicionaTicket', component: FormularioComponent },
+  { path: 'adicionaPet', component: FormularioComponent },
  
 ];
 @NgModule({

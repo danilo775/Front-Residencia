@@ -12,6 +12,8 @@
 <br/>
 <a routerLink="/barco" routerLinkActive="ativo">Barco</a>
 <br/>
+<a routerLink="/boneco" routerLinkActive="ativo">boneco</a>
+<br/>
 <hr>
 <button (click)="paraAviao()">Mostrar Aviao</button>
 <hr>
@@ -20,6 +22,6 @@
 <a [routerLink]="['/animal', inputText]"
    [queryParams]="{order: 'pesados', vacinados: 'true'}" routerLinkActive="ativo">Para animal</a> -->
 
-<a [routerLink]="['/animal']" routerLinkActive="ativo">Para animal</a>
+<a [routerLink]="['addAnimal']" routerLinkActive="ativo">Para animal</a>
 
 <router-outlet></router-outlet>

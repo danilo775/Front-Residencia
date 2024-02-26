@@ -9,11 +9,13 @@ import { Router, RouterModule, Routes } from '@angular/router';
 import { AnimalComponent } from './animal/animal.component';
 import { FormsModule } from '@angular/forms';
 import { AnimalEditarComponent } from './animal-editar/animal-editar.component';
+import { BonecoComponent } from './boneco/boneco.component';
 
 const rotasApp: Routes = [
   { path: 'aviao', component: AviaoComponent },
   { path: 'carro', component: CarroComponent },
   { path: 'barco', component: BarcoComponent },
+  { path: 'boneco', component: BonecoComponent },
   
   { path: 'animal', component: AnimalComponent, children: [
     { path: ':id', component: AnimalComponent },
@@ -28,6 +30,7 @@ const rotasApp: Routes = [
     CarroComponent,
     BarcoComponent,
     AnimalComponent,
+    BonecoComponent,
   ],
   imports: [
     BrowserModule,
