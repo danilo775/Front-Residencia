@@ -6,18 +6,17 @@ import { AppComponent } from './app.component';
 import { FormularioComponent } from './formulario/formulario.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { Routes } from '@angular/router';
+import { ContatoComponent } from './contato/contato.component';
+import { ListarPetComponent } from './listar-pet/listar-pet.component';
 
-const routes: Routes = [
 
-  { path: 'adicionaPet', component: FormularioComponent },
- 
-];
 @NgModule({
   declarations: [
     AppComponent,
     FormularioComponent,
-    FormularioComponent
+    FormularioComponent,
+    ContatoComponent,
+    ListarPetComponent,
   ],
   imports: [
     BrowserModule,

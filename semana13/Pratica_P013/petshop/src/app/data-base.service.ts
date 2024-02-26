@@ -56,4 +56,17 @@ export class DataBaseService implements OnInit {
     );
   }
   
+  addMensagem(msgData: {  nome: string, 
+    email: string, 
+    mensagem: string 
+  }) {
+
+this.http.post('https://petshop-b760a-default-rtdb.firebaseio.com/posts.json',msgData)
+.subscribe(responseData => {
+console.log(responseData);
+});
+}
+apagarTodosTickets() {
+  return this.http.delete('https://aula13-3a92f-default-rtdb.firebaseio.com/posts.json');
+}
 }
