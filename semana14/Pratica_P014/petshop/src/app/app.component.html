@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="header">
+      <div class="logo">PETSHOP</div>    
+      <div class="nav-links">
+          <a routerLink="*" routerLinkActive="active">Home</a>
+          <a routerLink="/adicionarPet" routerLinkActive="active">Adicionar</a>
+          <a routerLink="/listarPet" routerLinkActive="active">Listar</a>
+          <a routerLink="/contato" routerLinkActive="active">Contato</a>
+          <a routerLink="/login" routerLinkActive="active">Sair</a>
+      </div>
+  </div>
+  <div class="content">
+    <router-outlet></router-outlet>
+    <app-login/>
+  </div>
+  <div class="footer">
+      <p>&copy; 2024 Residência. Todos os direitos reservados. <a href="#">Política de Privacidade</a> | <a href="#">Termos do serviço</a></p>
+  </div>
+</div>

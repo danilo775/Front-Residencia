@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Subject, tap } from 'rxjs';
-import { Usuario } from './auth/usuario.model';
+import { Usuario } from './login/usuario.model';
 
 interface AuthResponseData {
   idToken: string;
@@ -23,7 +23,7 @@ export class AutenticaService {
   constructor(private http: HttpClient) { }
 
   signupUser(email: string, password: string) {
-   return this.http.post<AuthResponseData>('https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=[AIzaSyBV8L2vunZ4QJcRls-XfNaI7Vqpt9FuvQM]', 
+   return this.http.post<AuthResponseData>('https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=[AIzaSyDBnSA9MYfHjzizrvOoP8WU3qtuZuWrf4A]', 
    {
       email: email,
       password: password,
@@ -45,7 +45,7 @@ export class AutenticaService {
   }
 
   loginUser(email: string, password: string) {
-    return this.http.post<AuthResponseData>('https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyBbHrkiG6nZlw_1KEtq9senY33hAHhRz2c',
+    return this.http.post<AuthResponseData>('https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyDBnSA9MYfHjzizrvOoP8WU3qtuZuWrf4A',
     {
       email: email,
       password: password,
