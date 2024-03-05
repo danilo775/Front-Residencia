@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Subject, tap } from 'rxjs';
-import { Usuario } from './auth/usuario.model';
+import { Usuario } from '../model/usuario.model';
 
 interface AuthResponseData {
   idToken: string;
