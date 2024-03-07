@@ -35,6 +35,11 @@ export class SuinoComponent  implements OnInit {
       this.loadedSuinos = [];
     });
   }
+  deletarSuino(id:any){
+    this.bancoService.deletarSuino(id).subscribe( () => {
+      console.log(id);
+    })
+  }
   
 
 }

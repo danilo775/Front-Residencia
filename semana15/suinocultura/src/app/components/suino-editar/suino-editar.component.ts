@@ -41,18 +41,14 @@ export class SuinoEditarComponent {
     this.getSuino(this.id);
   }
 
-  getSuino(id: any) {
-    console.log("id-->"+id);
+ 
+   getSuino(id: any) {
+    console.log("id-->"    + id);
     this.bancoService.getSuin(id).subscribe(responseData => {
       console.log(responseData);
-      if (responseData && responseData.brincoAnimal !== undefined) {
-        this.bilheteSuinoForm.setValue(responseData);
-      } else {
-        console.error("O objeto responseData não possui a estrutura esperada.");
-      }
+      this.bilheteSuinoForm.setValue(responseData);
     });
   }
-  
 
   salvarSuino() {
     console.log("salvar ticket: " + this.bilheteSuinoForm.value);
