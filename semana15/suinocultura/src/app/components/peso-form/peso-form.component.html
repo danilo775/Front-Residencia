@@ -1,0 +1,20 @@
+<form [formGroup]="pesoForm" (ngSubmit)="adicionarPeso()" class="m-3" #formSuino="ngForm">
+    <div class="form-group mt-3">
+      <label for="peso">Peso:</label>
+      <input type="string" id="brincoAnimal" formControlName="peso" class="form-control" required>
+      <div class="alert alert-danger" *ngIf="!brincoAnimal?.valid && formSuino.touched">
+        <p *ngIf="brincoAnimal?.errors?.['required']">Brinco animal é obrigatorio</p>
+        <p *ngIf="brincoAnimal?.errors?.['pattern']">Apenas números são permitidos</p>     
+      </div>
+    </div>
+    
+  
+    <div class="form-group mt-3">
+      <label for="dataPeso">Data da pesagem:</label>
+      <input type="date" id="dataSaida" formControlName="dataSaida" class="form-control">
+    </div>
+  
+ 
+    <button type="submit" class="btn btn-primary mt-3">Cadastrar</button>
+  </form>
+  

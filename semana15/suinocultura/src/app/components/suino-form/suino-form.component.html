@@ -1,9 +1,13 @@
-<form [formGroup]="suinoForm" (ngSubmit)="adicionarSuino()" class="m-3">
+<form [formGroup]="suinoForm" (ngSubmit)="adicionarSuino()" class="m-3" #formSuino="ngForm">
   <div class="form-group mt-3">
     <label for="brincoAnimal">Brinco do Animal:</label>
-    <input type="number" id="brincoAnimal" formControlName="brincoAnimal" class="form-control">
+    <input type="string" id="brincoAnimal" formControlName="brincoAnimal" class="form-control" required>
+    <div class="alert alert-danger" *ngIf="!brincoAnimal?.valid && formSuino.touched">
+      <p *ngIf="brincoAnimal?.errors?.['required']">Brinco animal é obrigatorio</p>
+      <p *ngIf="brincoAnimal?.errors?.['pattern']">Apenas números são permitidos</p>     
+    </div>
   </div>
-
+  
   <div class="form-group mt-3">
     <label for="brincoPai">Brinco do pai:</label>
     <input type="number" id="brincoPai" formControlName="brincoPai" class="form-control">
