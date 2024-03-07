@@ -8,7 +8,7 @@
             <!-- <app-loading-spinner></app-loading-spinner> -->
         </div>
         <form #autenticaForm="ngForm"  (ngSubmit)="onSubmit(autenticaForm)" *ngIf="!estaCarregando">
-            <div class="form-group mb-3 mt-5">
+            <div class="form-group mb-3 mt-5" >
                 <label for="email">E-mail</label>
                 <input  type="email" 
                         class="form-control"
@@ -16,8 +16,17 @@
                         name="email"
                         ngModel
                         email 
-                        required>
+                        required #email="ngModel">         
             </div>
+            <div class="alert alert-danger" *ngIf="!email.valid && email.touched">
+                E-mail é obrigatório.
+            </div>
+            <!-- <div class="alert alert-danger" *ngIf="email.hasError('email') && email.touched">
+                O e-mail está em um formato inválido.
+            </div> -->
+
+
+
             <div class="form-group mb-3">
                 <label for="password">Password</label>
                 <input  type="password" 
@@ -26,13 +35,18 @@
                         name="password"
                         ngModel
                         minlength="6" 
-                        required>
+                        required #password="ngModel">
+            </div>
+
+            <div class="alert alert-danger" *ngIf="!password.valid && password.touched">
+                Senha é obrigatorio.
             </div>
 
             <div class="mb-3 form-check">
                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
                 <label class="form-check-label" for="exampleCheck1">Check me out</label>
               </div>
+              
 
             <div>
                 <button class="btn btn-primary " type="submit" [disabled]="!autenticaForm.valid">{{modoLogin ? 'Login' : 'inscrever-se'}}</button>

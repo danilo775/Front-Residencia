@@ -23,7 +23,7 @@ export class AutenticaService {
   constructor(private http: HttpClient) { }
 
   signupUser(email: string, password: string) {
-   return this.http.post<AuthResponseData>('https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=[AIzaSyBV8L2vunZ4QJcRls-XfNaI7Vqpt9FuvQM]', 
+   return this.http.post<AuthResponseData>('https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=[AIzaSyABFRYwt1nBvk3bid38TE8lbsl0shMN4aQ]', 
    {
       email: email,
       password: password,
@@ -45,7 +45,7 @@ export class AutenticaService {
   }
 
   loginUser(email: string, password: string) {
-    return this.http.post<AuthResponseData>('https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyBV8L2vunZ4QJcRls-XfNaI7Vqpt9FuvQM',
+    return this.http.post<AuthResponseData>('https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyABFRYwt1nBvk3bid38TE8lbsl0shMN4aQ',
     {
       email: email,
       password: password,

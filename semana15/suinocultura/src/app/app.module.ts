@@ -11,12 +11,18 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AutenticaInterceptor } from './interceptors/autentica.interceptor';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { SuinoFormComponent } from './components/suino-form/suino-form.component';
+import { SuinoComponent } from './components/suino/suino.component';
+import { SuinoEditarComponent } from './components/suino-editar/suino-editar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    HeaderComponent
+    HeaderComponent,
+    SuinoFormComponent,
+    SuinoComponent,
+    SuinoEditarComponent
   ],
   imports: [
     BrowserModule,
