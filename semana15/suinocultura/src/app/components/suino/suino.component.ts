@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BancoService } from '../../services/banco.service';
 import { Suino } from '../../model/suino.model';
+
 @Component({
   selector: 'app-suino',
   templateUrl: './suino.component.html',

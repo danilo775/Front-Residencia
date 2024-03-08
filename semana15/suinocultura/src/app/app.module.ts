@@ -15,6 +15,7 @@ import { SuinoFormComponent } from './components/suino-form/suino-form.component
 import { SuinoComponent } from './components/suino/suino.component';
 import { SuinoEditarComponent } from './components/suino-editar/suino-editar.component';
 import { PesoFormComponent } from './components/peso-form/peso-form.component';
+import { ListaPesoComponent } from './components/lista-peso/lista-peso.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { PesoFormComponent } from './components/peso-form/peso-form.component';
     SuinoFormComponent,
     SuinoComponent,
     SuinoEditarComponent,
-    PesoFormComponent
+    PesoFormComponent,
+    ListaPesoComponent
   ],
   imports: [
     BrowserModule,
