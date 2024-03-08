@@ -27,6 +27,26 @@ export class SuinoFormComponent {
     return this.suinoForm.get('brincoAnimal')!;
   }
 
+  get brincoPai() {
+    return this.suinoForm.get('brincoPai')!;
+  }
+
+  get brincoMae() {
+    return this.suinoForm.get('brincoMae')!;
+  }
+
+  get dataNascimento() {
+    return this.suinoForm.get('dataNascimento')!;
+  }
+
+  get dataSaida() {
+    return this.suinoForm.get('dataSaida')!;
+  }
+
+  get status() {
+    return this.suinoForm.get('status')!;
+  }
+
   adicionarSuino(): void {
     if (this.suinoForm.invalid) {
       return;

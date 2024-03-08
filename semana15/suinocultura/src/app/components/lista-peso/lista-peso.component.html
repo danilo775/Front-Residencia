@@ -12,9 +12,10 @@
           <td>{{ peso.peso }}</td>
           <td>{{ peso.dataPeso }}</td>
           <td>
-            <button type="button" class="btnEditar m-1" routerLink="/ep/{{ peso.id }}">Editar</button>
+            <button type="button" class="btnEditar m-1" routerLink="/ep/{{ peso }}">Editar</button>
             <button type="button" class="btnDeletar" (click)="deletarSuino(peso.id)">Deletar</button>
           </td>
+        
       </tr>
     </tbody>
   </table>

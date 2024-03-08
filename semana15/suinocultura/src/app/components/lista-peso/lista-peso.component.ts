@@ -26,6 +26,7 @@ export class ListaPesoComponent  implements OnInit {
       console.log(responseData);
       // Converter os valores do objeto em um array de objetos
       this.loadedPesos = Object.values(responseData);
+      console.log("this.loadedPesos");
       console.log(this.loadedPesos);
     });
   }
