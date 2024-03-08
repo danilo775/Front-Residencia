@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AutenticaService } from '../../services/autentica.service';
 import { Subscription } from 'rxjs';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -12,7 +13,7 @@ export class HeaderComponent implements OnInit{
     private inscricao!: Subscription;
     estaAutenticado = false;
   
-    constructor(private autenticaService: AutenticaService) { }
+    constructor(private autenticaService: AutenticaService, private rotas:Router, private route: ActivatedRoute) { }
   
   
     ngOnInit(): void {
@@ -29,5 +30,8 @@ export class HeaderComponent implements OnInit{
     logout() {
       this.autenticaService.logout();
       console.log('logout');
+      setTimeout(() => {
+        this.rotas.navigate(['']);
+       }, 1000);
     }
 }

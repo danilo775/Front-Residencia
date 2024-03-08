@@ -46,9 +46,22 @@ export class PesoService {
     return this.http.get<Peso[]>(`https://suinocultura-27005-default-rtdb.firebaseio.com/posts/${id}/pesos.json`);
   }
 
-  editarPeso(id: string, SuinoData: { peso: number; dataPeso: string; id?: string; }) {
-    return this.http.put(`https://suinocultura-27005-default-rtdb.firebaseio.com/posts/${id}.json`, SuinoData, { observe: 'response' });
-  }
+  editarPeso(id: string, PesoData: { peso: string; dataPeso: string; id?: string; }) {
+    // Recupera os dados do suíno para incluir na requisição PUT
+    return this.getSuin(id).pipe(
+        map(suinoData => {
+            // Combina os dados do suíno com os dados do peso
+            const newData = { ...suinoData, ...PesoData };
+            // Executa a requisição PUT com os dados combinados
+            return this.http.put(`https://suinocultura-27005-default-rtdb.firebaseio.com/posts/${id}.json`, newData, { observe: 'response' });
+        })
+    );
+}
+
+
+  
+  
+  
 
   getSuino2() {
     return this.http.get('https://suinocultura-27005-default-rtdb.firebaseio.com/posts.json', {

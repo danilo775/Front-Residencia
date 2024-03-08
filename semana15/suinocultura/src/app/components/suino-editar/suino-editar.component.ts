@@ -51,7 +51,7 @@ export class SuinoEditarComponent {
   }
 
   salvarSuino() {
-    console.log("salvar ticket: " + this.bilheteSuinoForm.value);
+    console.log("salvar Suino: " + this.bilheteSuinoForm.value);
     this.bancoService.editarSuino(this.id, this.bilheteSuinoForm.value).subscribe(responseData => {
       if(responseData.status == 200){
         this.editadoSucesso = true;
