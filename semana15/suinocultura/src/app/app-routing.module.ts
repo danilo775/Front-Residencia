@@ -5,6 +5,7 @@ import { SuinoComponent } from './components/suino/suino.component';
 import { SuinoFormComponent } from './components/suino-form/suino-form.component';
 import { SuinoEditarComponent } from './components/suino-editar/suino-editar.component';
 import { PesoFormComponent } from './components/peso-form/peso-form.component';
+import { ListaPesoComponent } from './components/lista-peso/lista-peso.component';
 
 const routes: Routes = [
   { path: '', component: LoginComponent},
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path:'adicionarSuinos', component: SuinoFormComponent},
   { path: 'editarSuino/:id', component: SuinoEditarComponent},
   { path: 'peso/:id', component: PesoFormComponent},
+  { path: 'listarPeso/:id', component: ListaPesoComponent},
 ];
 
 @NgModule({

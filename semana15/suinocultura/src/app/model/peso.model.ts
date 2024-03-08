@@ -1,5 +1,5 @@
 export interface Peso{
-    peso: number;
+    peso: string;
     dataPeso: string;
     id?: string;
 }
